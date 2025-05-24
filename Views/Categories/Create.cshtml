@@ -1,0 +1,23 @@
+﻿@model Category
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h1>Create Page</h1>
+        <form method="post" action="/Categories/Create">
+            <div class="mb-2">
+                <input type="text" name="Name" class="form-control" placeholder="category name .."/>
+                <span class="text-danger" asp-validation-for="Name"></span>
+            </div>
+            <div class="mb-2">
+                <textarea name="Description" class="form-control" placeholder="category description .."></textarea>
+            <span class="text-danger" asp-validation-for="Description"></span>
+            </div>
+            <button class="btn btn-outline-dark">Save</button>
+        </form>
+        <hr/>
+        <a href="/Categories/Index">Index</a>
+</body>
+    </html>

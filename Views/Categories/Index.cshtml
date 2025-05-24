@@ -1,0 +1,26 @@
+﻿@{
+    string name = "naila saleh";
+    int age = 21;
+    List<string> friends = new List<string>()
+    {
+        "naila","duha","nada","lina","besan"
+    };
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>Index Page</h1>
+    <h2>Hello @name</h2>
+    @foreach(var item in Model)
+    {
+        <h3>@item.Name</h3>
+        <a href="/Categories/Details/@item.Id">Details</a>
+        <a href="/Categories/Delete/@item.Id">Delete</a>
+    }
+    <hr/>
+    <a href="/Categories/Create">Create</a>
+    </body>
+    </html>
